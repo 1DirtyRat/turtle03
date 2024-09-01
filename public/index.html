@@ -10,16 +10,28 @@
   <script src="./js/preload.js"></script>
 
   <style>
-    a:link, a:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid green;
-  padding: 100px 100px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
 
+    a:link,
+    a:visited {
+      background-color: grey;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+      border-radius: 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
   </style>
 
   <script>
@@ -34,11 +46,9 @@
 </head>
 
 <body theme="main">
-   <a href="https://ikop24.vercel.app/service/hvtrs8%2F-g%2Ciermuvkc.pu-gcmgs-540-CRKvhGFrsebWRkN7%2F%3B13fd409%2Ff3ff-60%606%2Fb60%3B-ge71%3A7c1%60da5-ildgx%2Chvmn">Click Here To Start Game/a>
-
+  <a href="https://ikop24.vercel.app/service/hvtrs8%2F-g%2Ciermuvkc.pu-gcmgs-540-CRKvhGFrsebWRkN7%2F%3B13fd409%2Ff3ff-60%606%2Fb60%3B-ge71%3A7c1%60da5-ildgx%2Chvmn">Click Here To Start Game</a>
 
   <div class="center-container">
-   
     <p id="splash"></p>
 
     <div class="ad">
@@ -47,7 +57,6 @@
     </div>
   </div>
 
- 
 </body>
 
 <script>
@@ -57,9 +66,9 @@
       document.querySelector('#splash').innerHTML =
         data[Math.floor(Math.random() * data.length)]
     })
-
- 
+</script>
 
 <script src="./js/index.js"></script>
 
 </html>
+
