@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      rel="shortcut icon"
-      href="./assets/images/icon.png"
-      type="image/png"
-    />
-    <title>Art Class</title>
 
-    <link rel="stylesheet" href="./css/master.css" />
+<head>
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
+  <title>Art Class</title>
 
-    <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
-    <script src="/uv/uv.config.js"></script>
-    <script src="./js/preload.js"></script>
-  </head>
+  <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
+  <script src="/uv/uv.config.js"></script>
+  <script src="./js/preload.js"></script>
 
-  <body>
-    <nav>
-      <div class="logo">
-        <img src="./assets/images/icon.png" alt="Logo" draggable="false" />
-        <h1>Art Class</h1>
-      </div>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
 
-      <p id="time"></p>
+    a:link,
+    a:visited {
+      background-color: grey;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+      border-radius: 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
 
-      <div class="navitems">
-        <div class="navitem"><a href="/">Home</a></div>
-        <div class="navitem"><a href="/gs.html">Games</a></div>
-        <div class="navitem"><a href="/apps.html">Apps</a></div>
-        <div class="navitem">
-          <a selected href="/emulator.html">Emulator</a>
-        </div>
-        <div class="navitem"><a href="/search.html">Search</a></div>
-      </div>
-    </nav>
+  <script>
+    atOptions = {
+      'key': 'fc0ad22bd8c1ea22c8c08df927121e8f',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
+  </script>
+</head>
 
-    <iframe class="frame"></iframe>
+<body theme="main">
+  <a href="https://ikop28.vercel.app/service/hvtrs8%2F-ggnvlg-ripoqhii%2Fcge%3A73.levlkf%7B.cpr%2F%60aqkgt%60anl%2Fsvaps-">Click Here To Start Game</a>
 
-    <script>
-      document.querySelector('.frame').src =
-        '/service/' + __uv$config.encodeUrl('https://demo.emulatorjs.org/')
-    </script>
-  </body>
-  <!-- https://tv-ep7.pages.dev/ -->
+  <div class="center-container">
+    <p id="splash"></p>
 
-  <script src="./js/index.js"></script>
+    <div class="ad">
+      <!-- <script type="text/javascript"
+        src="//www.topcreativeformat.com/fc0ad22bd8c1ea22c8c08df927121e8f/invoke.js"></script> -->
+    </div>
+  </div>
+
+</body>
+
+<script>
+  fetch('./assets/data/splash.json')
+    .then((res) => res.json())
+    .then((data) => {
+      document.querySelector('#splash').innerHTML =
+        data[Math.floor(Math.random() * data.length)]
+    })
+</script>
+
+<script src="./js/index.js"></script>
+
 </html>
